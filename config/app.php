@@ -192,6 +192,11 @@ return [
          */
         Cviebrock\EloquentSluggable\ServiceProvider::class,
 
+        /*
+         * Laravel Debugbar Service Providers
+         */
+        Barryvdh\Debugbar\ServiceProvider::class,
+
     ],
 
     /*
@@ -251,6 +256,11 @@ return [
          * Intervention Image Aliases
          */
         'Image' => Intervention\Image\Facades\Image::class,
+
+        /*
+         * Laravel Debugbar Aliases
+         */
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 
