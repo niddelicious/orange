@@ -187,6 +187,11 @@ return [
          */
         Intervention\Image\ImageServiceProvider::class,
 
+        /*
+         * Eloquent Sluggable Service Providers
+         */
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
+
     ],
 
     /*
