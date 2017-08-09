@@ -1,9 +1,11 @@
 <?php
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
+    protected $toTruncate = ['users', 'posts', 'tags', 'categories', 'post_tag', 'category_post'];
     /**
      * Run the database seeds.
      *
@@ -11,6 +13,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        Model::unguard();
+
+        foreach ($this->toTruncate as $table) {
+            DB::table($table)->truncate();
+        }
+        $this->call('UsersTableSeeder');
+        $this->call('PostsTableSeeder');
+        $this->call('TagsTableSeeder');
+        $this->call('CategoriesTableSeeder');
+        $this->call('PostsPivotTableSeeder');
     }
 }
