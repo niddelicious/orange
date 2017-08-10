@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/layout', function () {
+    return view('orange.layout');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -1,0 +1,88 @@
+@mixin mini {
+  @media (max-width: #{$media-mini-width-max}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (min-width: #{$media-small-width-min}) and (max-width: #{$media-small-width-max}) {
+    @content;
+  }
+}
+
+@mixin small-and-over {
+  @media (min-width: #{$media-small-width-min}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: #{$media-small-width-max}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$media-medium-width-min}) and (max-width: #{$media-medium-width-max}) {
+    @content;
+  }
+}
+
+@mixin medium-and-over {
+  @media (min-width: #{$media-medium-width-min}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$media-large-width-min}) and (max-width: #{$media-large-width-max}) {
+    @content;
+  }
+}
+
+@mixin large-and-over {
+  @media (min-width: #{$media-large-width-min}) {
+    @content;
+  }
+}
+
+@mixin huge {
+  @media (min-width: #{$media-huge-width-min}){
+    @content;
+  }
+}
+
+@mixin retina {
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+$elementSeparator: '__';
+$modifierSeparator: '--';
+
+@mixin b($block) {
+  .#{$block} {
+    @content;
+  }
+}
+@mixin e($element) {
+  @at-root {
+    #{&}#{$elementSeparator+$element} {
+      @content;
+    }
+  }
+}
+@mixin m($modifier) {
+  @at-root {
+    #{&}#{$modifierSeparator+$modifier} {
+      @content;
+    }
+  }
+}

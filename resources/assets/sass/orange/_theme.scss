@@ -1,0 +1,47 @@
+html {
+  background-image: url('/images/themes/orange/proteus-sepia-background.jpg');
+  background-size: cover;
+}
+
+body{
+  font: normal 16px/24px 'Open Sans', sans-serif;
+}
+
+h1{
+  font: 1.5rem/2rem 'Droid Sans', sans-serif;
+  @include huge {
+    font: 2rem/2.5rem 'Droid Sans', sans-serif;
+  }
+}
+
+header {
+
+}
+.content {
+
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 4rem;
+  font-family: "Droid Sans", sans-serif;
+  background-color: $grey-dark;
+  color: $grey-lighter;
+  .copy {
+    background-color: $grey-dark;
+  }
+}
+
+.container {
+
+}
+.header-box {
+  background-color: $grey-dark;
+  color: $white;
+}
+
+.trio-text {
+  background-color: $orange-base;
+}

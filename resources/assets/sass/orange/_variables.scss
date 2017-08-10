@@ -1,0 +1,62 @@
+//--------
+// Colors
+//--------
+
+// Greyscale
+$black: #000000;
+$grey-darker: #252627;
+$grey-dark: #323334;
+$grey-base: #c3c6c8;
+$grey-light: #dbddde;
+$grey-lighter: #f4f4f4;
+$white: #FFFFFF;
+
+// Primary
+$orange-darker: #A05700;
+$orange-dark: #CB6F01;
+$orange-base: #FB9214;
+$orange-light: #FFAA44;
+$orange-lighter: #FFBD6D;
+
+// Secondary
+$red-darker: #A02400;
+$red-dark: #CB2E01;
+$red-base: #FB4814;
+$red-light: #FF6E44;
+$red-lighter: #FF8E6D;
+
+// Tertiary
+$yellow-darker: #A07400;
+$yellow-dark: #CB9401;
+$yellow-base: #FBBC14;
+$yellow-light: #FFCC44;
+$yellow-lighter: #FFD76D;
+
+// Complimentary
+$blue-darker: #044465;
+$blue-dark: #075681;
+$blue-base: #337FA8;
+$blue-light: #146F9F;
+$blue-lighter: #5799BD;
+//--------
+
+//--------
+// Media
+//--------
+$media-mini: "(max-width: 299px)";
+$media-mini-width-max: 299px;
+
+$media-small: "(min-width: 300px) and (max-width: 599px)";
+$media-small-width-min: 300px;
+$media-small-width-max: 599px;
+
+$media-medium: "(min-width: 600px) and (max-width: 899px)";
+$media-medium-width-min: 600px;
+$media-medium-width-max: 899px;
+
+$media-large: "(min-width: 900px) ans (maz-width: 1199px)";
+$media-large-width-min: 900px;
+$media-large-width-max: 1199px;
+
+$media-huge: "(min-width: 1200px)";
+$media-huge-width-min: 1200px;
