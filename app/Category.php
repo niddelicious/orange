@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     //
+    protected static function getNavigation()
+    {
+        return Category::where('parent_id', '=', '0')->get();
+    }
+
     public function posts()
     {
         return $this->hasMany(Post::class);
@@ -14,11 +19,11 @@ class Category extends Model
 
     public function parent()
     {
-        return $this->belongsTo('Category','parent_id');
+        return $this->belongsTo('App\Category', 'parent_id');
     }
 
     public function children()
     {
-        return $this->hasMany('Category','parent_id');
+        return $this->hasMany('App\Category', 'parent_id');
     }
 }

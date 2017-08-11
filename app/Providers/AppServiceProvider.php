@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Category;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\View\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,6 +16,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        view()->composer(
+            'orange.shared.nav', function ($view) {
+            $nav = Category::getNavigation();
+            $view->with('nav', $nav);
+        }
+        );
     }
 
     /**

@@ -17,6 +17,14 @@ class PostController extends Controller
         //
     }
 
+    public function home()
+    {
+        $head = Post::all()->sortByDesc('created_at')->first();
+        $trio = Post::take(3)->skip(1)->get();
+
+        return view('orange.home.content')->with(['head' => $head, 'trio' => $trio]);
+
+    }
     /**
      * Show the form for creating a new resource.
      *

@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/layout', function () {
-    return view('orange.home.content');
-});
+Route::get('/layout', 'PostController@home');
 
 Auth::routes();
 

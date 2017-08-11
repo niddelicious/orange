@@ -17,6 +17,7 @@ h1{
 header {
 
 }
+
 .content {
 
 }
@@ -35,8 +36,9 @@ footer {
 }
 
 .container {
-
+  background-color: $grey-lighter;
 }
+
 .header-box {
   background-color: $grey-dark;
   color: $white;

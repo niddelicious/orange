@@ -1,0 +1,65 @@
+nav {
+  margin: 0 0 1rem;
+  background-color: $grey-darker;
+  color: $grey-lighter;
+  font: normal 1.3rem/2rem 'Droid Sans', sans-serif;
+
+  ul {
+  }
+  .level-root {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  li:hover {
+    color: $orange-base;
+  }
+  li:hover ul {
+    display: block;
+  }
+  ul ul ul {
+    left: 100%;
+    top: 0;
+  }
+}
+
+@include b('navbar') {
+  @include e('list') {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    @include m('sub') {
+      display: none;
+      position: absolute;
+      left: 100%;
+      top: 0;
+    }
+  }
+  @include e('item') {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    list-style: none;
+    position: relative;
+
+    &:hover ul {
+      display: block;
+    }
+
+    @include m('sub') {
+      display: block;
+      background-color: $grey-dark;
+      white-space: nowrap;
+
+    }
+  }
+}

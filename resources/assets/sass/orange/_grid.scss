@@ -43,24 +43,6 @@ body {
   .header-text {
     padding: 1rem;
     flex: 1;
-    /*
-    @include medium{
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 33.333%;
-      background-color: rgba($grey-dark, 0.75);
-    }
-    @include large{
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 33.333%;
-      background-color: rgba($grey-dark, 0.75);
-    }
-    */
     @include huge {
       flex: 1;
     }
@@ -108,6 +90,12 @@ body {
   .trio-text {
     flex: 1;
     padding: 1rem;
+    @include small {
+      flex: 2;
+    }
+    @include medium {
+      flex: 2;
+    }
   }
 }
 
