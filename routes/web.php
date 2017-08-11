@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/layout', function () {
-    return view('orange.layout');
+    return view('orange.home.content');
 });
 
 Auth::routes();
