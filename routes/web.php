@@ -17,6 +17,12 @@ Route::get('/', function () {
 
 Route::get('/layout', 'PostController@home');
 
+Route::group(['before' => 'auth'], function () {
+    Route::get('/laravel-filemanager', '\Unisharp\Laravelfilemanager\controllers\LfmController@show');
+    Route::post('/laravel-filemanager/upload', '\Unisharp\Laravelfilemanager\controllers\LfmController@upload');
+    // list all lfm routes here...
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
