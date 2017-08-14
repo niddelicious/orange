@@ -197,6 +197,11 @@ return [
          */
         Barryvdh\Debugbar\ServiceProvider::class,
 
+        /*
+         * Laravel File Manager
+         */
+        Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
+
     ],
 
     /*
