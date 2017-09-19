@@ -18,5 +18,7 @@
 
 @yield ('content')
 
+<script src="{{ mix('/js/orange/orange.js') }}">
+
 </body>
 </html>

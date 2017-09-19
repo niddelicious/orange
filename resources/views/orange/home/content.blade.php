@@ -1,6 +1,9 @@
 @extends ('orange.layout')
 
 @section ('content')
+
+    @include ('orange.shared.menu')
+
     <div class="container">
         @include ('orange.home.header')
 

@@ -8,6 +8,8 @@ use Illuminate\View\View;
 
 class AppServiceProvider extends ServiceProvider
 {
+    private $categories;
+
     /**
      * Bootstrap any application services.
      *
@@ -15,12 +17,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
         view()->composer(
-            'orange.shared.nav', function ($view) {
-            $nav = Category::getNavigation();
-            $view->with('nav', $nav);
-        }
+            ['orange.shared.nav', 'orange.shared.menu'],
+            function (View $view) {
+                if (!$this->categories) {
+                    $this->categories = Category::getNavigation();
+                }
+                $view->with('categories', $this->categories);
+            }
         );
     }
 
