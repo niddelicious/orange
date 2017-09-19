@@ -1,0 +1,49 @@
+@include b('menu') {
+  margin: 0 0 1rem;
+  background-color: $grey-darker;
+  color: $grey-lighter;
+  font: normal 1rem/2rem 'Droid Sans', sans-serif;
+
+  display: block;
+  @include medium-and-over {
+    display: none;
+  }
+
+  @include e('list') {
+    display: none;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex-shrink: 0;
+
+    background-color: $grey-dark;
+
+    @include m('open') {
+      display: flex;
+    }
+
+    @include m('submenu') {
+      padding-left: 1em;
+    }
+  }
+
+  @include e('item') {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2em 0.4em;
+    flex-wrap: wrap;
+    @include m('text') {
+    }
+
+    @include m('icon') {
+      .material-icons {
+        display: block;
+      }
+    }
+
+    @include m('submenu') {
+      border-bottom: 1px solid $grey-darker;
+    }
+  }
+}

@@ -3,6 +3,10 @@ html, body {
 }
 body {
   display: flex;
+  flex-direction: column;
+  @include medium-and-over {
+    flex-direction: column;
+  }
 }
 .container {
   display: flex;
