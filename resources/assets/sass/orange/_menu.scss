@@ -33,6 +33,7 @@
     align-items: center;
     padding: 0.2em 0.4em;
     flex-wrap: wrap;
+    border-bottom: 1px solid $grey-darker;
     @include m('text') {
     }
 
@@ -40,10 +41,6 @@
       .material-icons {
         display: block;
       }
-    }
-
-    @include m('submenu') {
-      border-bottom: 1px solid $grey-darker;
     }
   }
 }
