@@ -24,12 +24,11 @@
 
                         <div class="frontpage__list--header">Articles</div>
                         <div class="frontpage__list--list">
-                            @include('orange.home.partials.article')
-                            @include('orange.home.partials.article')
-                            @include('orange.home.partials.article')
-                            @include('orange.home.partials.article')
-                            @include('orange.home.partials.article')
-                            @include('orange.home.partials.article')
+                            @foreach ( $list as $post )
+
+                                @include('orange.home.partials.article')
+
+                            @endforeach
                         </div>
 
                     </section>
