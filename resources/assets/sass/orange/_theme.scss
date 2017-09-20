@@ -67,6 +67,9 @@ header {
     &:last-of-type {
       border-bottom: 0;
     }
+    & h3 {
+      padding-bottom: .5em;
+    }
   }
   @include e('aside') {
     background-color: $grey-light;
