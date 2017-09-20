@@ -22,7 +22,7 @@ header {
 
 }
 
-footer {
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,4 +46,33 @@ footer {
 
 .trio-text {
   background-color: $orange-base;
+}
+
+@include b('frontpage') {
+
+  @include e('list') {
+    @include m('header') {
+      background-color: $grey-darker;
+      color: $grey-lighter;
+      font: normal 1.3rem/2rem 'Droid Sans', sans-serif;
+      padding: 0.5em;
+    }
+    @include m('list') {
+      background-color: $white;
+    }
+  }
+
+  @include e('article') {
+    border-bottom: 1px solid $grey-lighter;
+    &:last-of-type {
+      border-bottom: 0;
+    }
+  }
+  @include e('aside') {
+    background-color: $grey-light;
+    padding: 1rem;
+    & ul {
+      list-style: none;
+    }
+  }
 }
