@@ -16,12 +16,6 @@
   }
 }
 
-@mixin small {
-  @media (max-width: #{$media-small-width-max}) {
-    @content;
-  }
-}
-
 @mixin medium {
   @media (min-width: #{$media-medium-width-min}) and (max-width: #{$media-medium-width-max}) {
     @content;

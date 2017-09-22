@@ -21,8 +21,9 @@ class PostController extends Controller
     {
         $head = Post::all()->sortByDesc('created_at')->first();
         $trio = Post::take(3)->skip(1)->get();
+        $list = Post::take(8)->skip(4)->get();
 
-        return view('orange.home.content')->with(['head' => $head, 'trio' => $trio]);
+        return view('orange.home.content')->with(['head' => $head, 'trio' => $trio, 'list' => $list]);
 
     }
     /**
